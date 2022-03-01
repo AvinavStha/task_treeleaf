@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "user_name": "Thomas Shelby",
+    "email": "thomas.shelby@email.com",
+    "phone_number": "2342534",
+    "dob":"22/01/1999",
+    "city":"Kathmandu",
+    "district":"Kathmandu",
+    "province":"2",
+    "country":"Nepal"
+
+  },
+  {
+    "id": 2,
+    "user_name": "Jon Snow",
+    "email": "jon.snow@email.com",
+    "phone_number": "7654321",
+    "dob":"22/01/1999",
+    "city":"Pokhara",
+    "district":"Pokhara",
+    "province":"2",
+    "country":"Nepal"
+
+  },
+  {
+    "id": 3,
+    "user_name": "Leo Decaprio",
+    "email": "leo.caprio@email.com",
+    "phone_number": "7668321",
+    "dob":"22/01/1899",
+    "city":"Butwal",
+    "district":"Lumbini",
+    "province":"3",
+    "country":"Nepal"
+
+  }
+]
