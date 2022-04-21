@@ -6,6 +6,7 @@ import ReadOnlyRow from "./components/ReadOnlyRow";
 import ProfileReadOnlyData from "./components/ProfileReadOnlyData";
 import EditableRow from "./components/EditableRow";
 import ProfileEditableData from "./components/ProfileEditableData";
+import api from "./api/Contacts";
 import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -137,23 +138,25 @@ const App = () => {
 
     setContacts(newContacts);
   };
-  const [order, setOrder] = useState("ASC");
-  const sorting = (col) => {
-    if (order === "ASC") {
-      const sorted = [...contacts].sorted((a, b) =>
-        a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1
-      );
-      setContacts(sorted);
-      setOrder("DSC");
-    }
-    if (order === "DSC") {
-      const sorted = [...contacts].sorted((a, b) =>
-        a[col].toLowerCase() < b[col].toLowerCase() ? 1 : -1
-      );
-      setContacts(sorted);
-      setOrder("ASC");
-    }
-  };
+
+  //Sorting Algorithm
+  // const [order, setOrder] = useState("ASC");
+  // const sorting = (col) => {
+  //   if (order === "ASC") {
+  //     const sorted = [...contacts].sorted((a, b) =>
+  //       a[col].toLowerCase() > b[col].toLowerCase() ? 1 : -1
+  //     );
+  //     setContacts(sorted);
+  //     setOrder("DSC");
+  //   }
+  //   if (order === "DSC") {
+  //     const sorted = [...contacts].sorted((a, b) =>
+  //       a[col].toLowerCase() < b[col].toLowerCase() ? 1 : -1
+  //     );
+  //     setContacts(sorted);
+  //     setOrder("ASC");
+  //   }
+  // };
 
   return (
     <div>
@@ -163,7 +166,7 @@ const App = () => {
             <table>
               <thead>
                 <tr>
-                  <th onClick={() => sorting("user_name")}>Name</th>
+                  <th >Name</th>
                   <th>Email</th>
                   <th>Phone Number</th>
                   <th>DOB</th>
